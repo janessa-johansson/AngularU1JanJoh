@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { user } from '../dashboard/dashboard.component';
+import { USERLIST } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-user-list-item',
@@ -10,6 +12,10 @@ export class UserListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    console.log("From users-list-ITEM: " + USERLIST);
   }
+
+  userList = USERLIST;
 
 }

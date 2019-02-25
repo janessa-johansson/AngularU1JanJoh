@@ -1,0 +1,13 @@
+.moveleft {
+    margin-left: 70px;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+.add {
+    background-color: green;
+}
+
+.remove {
+    background-color: red;
+}

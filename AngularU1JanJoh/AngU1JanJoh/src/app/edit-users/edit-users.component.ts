@@ -12,4 +12,12 @@ export class EditUsersComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeUser() {
+    console.log("You removed a user!")
+  }
+
+  addUser() {
+    console.log("You added a user!")
+  }
+
 }
