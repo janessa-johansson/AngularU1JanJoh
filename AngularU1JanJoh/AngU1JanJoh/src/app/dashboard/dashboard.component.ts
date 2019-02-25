@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
 
     console.log(user);
-    console.log(USERLIST);
+    console.log(USERLIST); 
   }
 
 }

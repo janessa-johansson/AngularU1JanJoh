@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { user } from '../dashboard/dashboard.component';
-// import { userList } from '../dashboard/dashboard.component';
 
 @Component({
   selector: 'app-users-list',
@@ -13,10 +11,5 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
   }
- 
-  toggleColors() {
-    console.log("You toggled!")
-  }
 
 }
-
