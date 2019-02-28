@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { user } from '../dashboard/dashboard.component';
-// import { userList } from '../dashboard/dashboard.component';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-users-list',
@@ -13,10 +11,25 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
   }
- 
+
+  //Input for users string array
+  @Input() users: string[];
+
+  //A toggle for colors
+  myToggle: boolean = true;
+
+  //Toggling user colors
   toggleColors() {
-    console.log("You toggled!")
+    this.myToggle = !this.myToggle;
   }
 
+  //Changing user colors dependent on the toggle state
+  changeIt(): string {
+    if (this.myToggle) {
+      return "purple";
+    }
+    else {
+      return "olivedrab";
+    }
+  }
 }
-

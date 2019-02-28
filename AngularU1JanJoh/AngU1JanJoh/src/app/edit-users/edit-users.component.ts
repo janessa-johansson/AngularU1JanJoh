@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { USERLIST } from '../dashboard/dashboard.component';
-import { user } from '../dashboard/dashboard.component';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-edit-users',
@@ -14,14 +12,21 @@ export class EditUsersComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeUser() {
-    console.log("You removed a user!")
-    console.log("This is a user: " +user)
-    console.log("This is a userlist: " +USERLIST)
-  }
+  //Output for Event Emmiters
+  @Output() addUserE = new EventEmitter<string>();
+  @Output() deleteUserE = new EventEmitter<void>();
 
+  //Inputting name
+  @Input() name = '';
+
+  //Event Emitter to dashboard for adding users
   addUser() {
-    console.log("You added a user!") 
+    this.addUserE.emit(this.name);
+    this.name = '';
   }
 
+  //Event Emitter to dashboard for deleting users
+  deleteUser() {
+    this.deleteUserE.emit();
+  }
 }

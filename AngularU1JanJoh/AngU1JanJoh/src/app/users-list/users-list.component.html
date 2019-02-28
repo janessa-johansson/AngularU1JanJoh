@@ -1,11 +1,4 @@
-<h3>[users-list component</h3>
-<!-- NG FOR HERE -->
 
-<h2>My Users</h2>
-  <ul class="users">
-        <li *ngFor="let user of users">{{user}}</li>
-  </ul>
-<app-user-list-item></app-user-list-item>
-<button class="toggle" (click)="toggleColors()">Toggle Colors</button>
+<app-user-list-item *ngFor="let user of users" [user]="user" [textColor]="changeIt()"></app-user-list-item>
+<button class="btn btn-dark" (click)="toggleColors()">Toggle User Colors</button>
 
-<h3>users-list component]</h3> 

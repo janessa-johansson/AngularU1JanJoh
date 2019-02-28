@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { user } from '../dashboard/dashboard.component';
-import { USERLIST } from '../dashboard/dashboard.component';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-list-item',
@@ -12,10 +10,14 @@ export class UserListItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    console.log("From users-list-ITEM: " + USERLIST);
   }
 
-  userList = USERLIST; 
+  //Input for user and textColor (string)
+  @Input() user: string;
+  @Input() textColor: string;
 
+  //Getting user colors
+  getColor(): Object {
+    return { "color": this.textColor };
+  }
 }

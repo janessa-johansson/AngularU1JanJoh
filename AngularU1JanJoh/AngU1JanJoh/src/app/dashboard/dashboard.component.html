@@ -1,6 +1,4 @@
-<h3>dashboard works!</h3>
-{{userList}}
-<div class="fcontainer">
-  <app-users-list></app-users-list>
-  <app-edit-users></app-edit-users> 
+<div class="fcontainer border border-info"> 
+<app-users-list [users]="userList"></app-users-list>
+<app-edit-users (addUserE)="addUser($event)" (deleteUserE)="deleteUser($event)"></app-edit-users>
 </div>

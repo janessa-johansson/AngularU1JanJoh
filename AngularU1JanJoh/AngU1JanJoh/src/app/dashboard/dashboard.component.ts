@@ -7,31 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-
-    console.log(user);
-    console.log(USERLIST); 
+  constructor() {
+    //Defining the userList
+    this.userList = ['Mr. Nice', 'Narco', 'Bomvasto', 'Celeritas ', 'Magenta']
   }
 
+  ngOnInit() {
+  }
+
+  //Defining userList as a string array
+  userList: string[];
+
+  //Adding user based on eventEmitter from edit-users-component
+  addUser($event: string) {
+    this.userList.unshift($event);
+  }
+
+  //Deleting a user
+  deleteUser() {
+    this.userList.pop();
+  }
 }
-
-export class user {
-  userName: string;
-  textColor: string;
-}
-
-export const USERLIST: user[] = [
-  { userName: 'Mr. Nice', textColor: 'green' },
-  { userName: 'Narco', textColor: 'green' },
-  { userName: 'Bomvasto', textColor:'"green' },
-  { userName: 'Celeritas ', textColor: 'green' },
-  { userName: 'Magenta', textColor: 'green' },
-  { userName: 'RubberMan', textColor: 'green' },
-  { userName: 'Dynama', textColor: 'green' },
-  { userName: 'Dr IQ', textColor: 'green' },
-  { userName: 'Magma', textColor: 'green' },
-  { userName: 'Tornado', textColor: 'green' }
-
-];

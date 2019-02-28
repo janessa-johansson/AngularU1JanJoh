@@ -1,13 +1,8 @@
 .moveleft {
-    margin-left: 70px;
-    background-color: cadetblue;
+    display: flex;
+    margin-left: 50px;
+    background-color: transparent;
     padding: 10px;
-}
-
-.add {
-    background-color: green;
-}
-
-.remove {
-    background-color: red; 
+    flex-flow: column;
+    margin-top: 70px;
 }
